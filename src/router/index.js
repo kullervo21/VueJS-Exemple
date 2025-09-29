@@ -9,9 +9,11 @@ const routes = [
         component: Home
     },
     {
+        // route avec le param id qu'on recupère avec routes.params.id dans les composants
         path: '/pokemon/:id',
         name: 'PokemonDetail',
         component: PokemonDetail,
+        //pour passer les params de la route comme props
         props: true
     }
 ]

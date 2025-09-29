@@ -18,6 +18,7 @@
 import { ref, onMounted } from "vue"
 import { useRoute } from "vue-router"
 
+// pour utiliser le router et avoir acces aux params
 const route = useRoute()
 // ref : valeur reactive comme avec Quarkus, angular, etc
 const pokemon = ref(null)

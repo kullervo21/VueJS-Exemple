@@ -49,10 +49,9 @@ export default {
               const detailRes = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
               const detail = await detailRes.json()
 
-              // species pour le nom fr
-              const speciesResult = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`)
-              const species = await speciesResult.json()
-              const frNameObj = species.names.find(n => n.language.name === "fr")
+              const callNomFr = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`)
+              const nomFr = await callNomFr.json()
+              const frNameObj = nomFr.names.find(n => n.language.name === "fr")
 
               return {
                 id,
